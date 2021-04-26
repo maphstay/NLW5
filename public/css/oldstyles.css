@@ -96,19 +96,9 @@ body {
   }
 }
 
-#client-msg {
-  padding: 10px;
-  margin: 0px;
-  margin-left: 30px;
-  width: 230px;
-}
-
 .client {
   display: flex;
   flex-direction: column;
-  background: #ffd0a5;
-  margin: 12px 5px 12px 5px;
-  border-radius: 10px;
 }
 
 .client .name {
@@ -117,16 +107,17 @@ body {
 
 .client_message {
   background: #f2ecfa;
-  padding: 10px;
+  padding: 20px 10px;
   margin: 10px 0;
   width: 250px;
   margin-left: 30px;
+  border-radius: 4px;
   line-height: 20px;
 }
 
 .client .message {
   background: #ffd0a5;
-  padding: 10px;
+  padding: 20px 10px;
   margin: 10px 0;
   width: 250px;
   margin-left: 30px;
@@ -143,25 +134,16 @@ body {
 .admin {
   display: flex;
   flex-direction: column;
-  margin: 12px 5px 12px 5px;
-  background: #b9b8b8;
-  border-radius: 10px;
-}
-
-#admin {
-  background: white;
-}
-
-#admin-msg {
-  padding: 10px;
-  margin: 0px;
-  margin-left: 30px;
 }
 
 .admin .message {
   background: #b9b8b8;
-  padding: 10px;
+  padding: 20px 10px;
+  margin: 10px 0;
+  width: 250px;
   margin-left: 30px;
+  border-radius: 4px;
+  line-height: 20px;
 }
 
 .message_send {
@@ -229,6 +211,7 @@ input[type="text"]:focus {
 .btn_start_chat {
   width: 121px;
   height: 40px;
+
   background: #ff7a00;
   border-radius: 4px;
   color: #fff;
@@ -283,6 +266,11 @@ input[type="text"]:focus {
   opacity: 0.9;
 }
 
+.admin {
+  /*border: 1px solid #ededed;*/
+  margin-top: 5px;
+}
+
 .email {
   float: left;
   width: 350px;
@@ -308,7 +296,8 @@ input[type="text"]:focus {
   overflow-y: scroll;
 }
 
-.admin_message_admin {
+.admin_message_admin,
+.admin {
   width: 300px;
   background: #b9b8b8;
   padding: 10px;

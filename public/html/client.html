@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,7 +26,7 @@
         <script id="message-user-template" type="text/template">
           <div class="client">
             <span class="name">{{email}}</span>
-            <span class="client message">
+            <span id="client-msg" class="client message">
               {{message}}
               <!-- <label class="date">{{date}}</label> -->
             </span>
@@ -35,7 +35,7 @@
         <script id="admin-template" type="text/template">
           <div class="admin">
             <span class="admin_name">Atendente</span>
-            <span class="admin message"> {{message_admin}} </span>
+            <span id="admin-msg" class="admin message"> {{message_admin}} </span>
             <!-- <label class="date">{{date}}</label> -->
           </div>
         </script>
@@ -112,11 +112,14 @@
     }
 
     function openChat() {
-      chat.style.display = "block";
+      if ((chat.style.display == "none" || chat.style.display == "") && (chat_in_support.style.display == "none" || chat_in_support.style.display == "")) {
+        chat.style.display = "block";
+      }
     }
 
     function closeChat() {
       chat.style.display = "none";
+      chat_in_support.style.display = "none"
     }
 
     function keyUpTextHelp(event) {
